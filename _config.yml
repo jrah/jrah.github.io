@@ -23,6 +23,7 @@ twitter_username: jmshome
 github_username:  jrah
 google_analytics: UA-61800971-1
 permalink: /:title/
+include: ["_items"]
 
 # Build settings
 markdown: kramdown
