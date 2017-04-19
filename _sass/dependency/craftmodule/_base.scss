@@ -1,0 +1,168 @@
+// Module: Base
+// Based off madbit/madsauce
+
+// Always hide an element when it has the `hidden` HTML attribute.
+%hidden,
+.hidden,
+[hidden] {
+  display: none;
+}
+
+// Reset box-sizing
+html,
+body,
+div,
+article,
+section,
+main,
+footer,
+header,
+form,
+fieldset,
+pre,
+code,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+textarea,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="url"] {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: normal;
+  line-height: 1.500;
+  background-color: $body-bg;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: $baseline * 0.75;
+  margin: 0.5rem 0;
+}
+
+
+// Fluid image to fit a lfuid parent container while maintaining aspect ratio
+img {
+  max-width: 100%;
+  // height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+// A better looking horizontal rule
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $grey-lighter;
+  margin: 1em 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Allow only vertical resizing of textareas
+textarea {
+  resize: vertical;
+}
+
+// -----------------------------------------------------------------------------
+// Vertical rhythm
+// -----------------------------------------------------------------------------
+p, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin: 0.5rem 0;
+}
+
+// -----------------------------------------------------------------------------
+// Lists
+// -----------------------------------------------------------------------------
+menu, ol, ul, dl {
+  padding: 0 0 0 $spacing-unit * 4;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+// -----------------------------------------------------------------------------
+// Figures
+// -----------------------------------------------------------------------------
+figure > img {
+  display: block;
+}
+
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+a {
+  color: $anchor-color;
+  text-decoration: none;
+  border-bottom: 1px solid $anchor-bottom;
+
+  &:hover {
+    border-bottom-color: $anchor-bottom-hover;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Blockquotes
+// -----------------------------------------------------------------------------
+blockquote {
+  color: $grey-dark;
+  border-left: 6px solid $grey-light;
+  border-radius: 2px;
+  padding: 0.25rem 0 0.25rem 1rem;
+  font-style: italic;
+}
+
+// Show for screen reader only
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// remove list styling
+.nolist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// missing tachyon style
+.mc {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,78 @@
+// base variable
+
+$white: #ffffff;
+$black: #000000;
+
+$red: #ff4136;
+$green: #19a974;
+$blue: #357edd;
+
+$red-darkest:          darken($red, 25%);
+$red-darker:           darken($red, 20%);
+$red-dark:             darken($red, 10%);
+$red-base:             $red;
+$red-light:            lighten($red, 5%);
+$red-lighter:          lighten($red, 20%);
+$red-lightest:         lighten($red, 25%);
+
+$green-darkest:          darken($green, 25%);
+$green-darker:           darken($green, 20%);
+$green-dark:             darken($green, 10%);
+$green-base:             $green;
+$green-light:            lighten($green, 5%);
+$green-lighter:          lighten($green, 20%);
+$green-lightest:         lighten($green, 25%);
+
+$blue-darkest:          darken($blue, 25%);
+$blue-darker:           darken($blue, 20%);
+$blue-dark:             darken($blue, 10%);
+$blue-base:             $blue;
+$blue-light:            lighten($blue, 5%);
+$blue-lighter:          lighten($blue, 20%);
+$blue-lightest:         lighten($blue, 25%);
+
+$grey-darkest:          #1c1c1c;
+$grey-darker:           #2c2e2f;
+$grey-dark:             #4a4a4a;
+$grey-base:             #8a8a8a;
+$grey-light:            #bababa;
+$grey-lighter:          #e6e6e6;
+$grey-lightest:         #f4f4f4;
+
+$orange:  #ff6300;
+$gold:  #ffb700;
+$yellow:  #ffd700;
+
+$primary: $red !default;
+$warning: $gold !default;
+$negative: $red !default;
+$positive: $green !default;
+
+// use variable
+$anchor-color: $primary !default;
+$anchor-bottom: $grey-lighter !default;
+$anchor-bottom-hover: $orange !default;
+$mono-stack: monospace, monospace !default;
+$font-family: "lato", -apple-system, BlinkMacSystemFont, system, sans-serif !default;
+$bg-color: $white !default;
+$text-color: $grey-darkest !default;
+$spacing-unit: 0.25rem !default;
+$baseline: 1.500 !default;
+
+// temporary @todo: fix!
+$body-bg: $white !default;
+$grey: $grey-base;
+
+// mixin
+
+$mqs: (
+  sm: 35.5em,
+  md: 48em,
+  lg: 64em,
+) !default;
+
+@mixin mq($mq) {
+  @media screen and (min-width: #{map-get($mqs, $mq)}) {
+    @content;
+  }
+}

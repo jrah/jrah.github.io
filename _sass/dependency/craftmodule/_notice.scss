@@ -1,0 +1,10 @@
+@mixin notice($border-color: $yellow, $background-color: $grey-lightest) {
+  border-left: 6px solid $border-color;
+  border-radius: 2px;
+  background-color: $background-color;
+  padding: .75rem;
+}
+
+.notice {
+  @include notice;
+}

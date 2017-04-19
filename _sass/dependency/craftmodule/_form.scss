@@ -1,0 +1,34 @@
+input[type="search"], input[type="text"], input[type="number"], input[type="password"], textarea, input[type="email"] {
+	outline: 0;
+	border: 1px solid $grey-light;
+
+  &:focus {
+    border-color: $primary;
+  }
+	border-radius: 4px;
+	color: $grey-dark;
+  vertical-align: middle;
+  margin: .25em 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: .01px;
+  text-overflow: "";
+  display: inline-block;
+  border: 1px solid $grey-light;
+  outline: 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba($grey, 0.1);
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+label {
+  display: block;
+  margin: .25em 0;
+  font-size: 100%;
+  line-height: 1.5;
+  vertical-align: baseline;
+}

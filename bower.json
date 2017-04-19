@@ -1,0 +1,22 @@
+{
+  "name": "jameshome",
+  "authors": [
+    "jrah <jjames.home@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "craftmodule": "jrah/craftmodule",
+    "susy": "^2.2.12"
+  }
+}
