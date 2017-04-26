@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: item
 title:  "WFP/Madbit Co"
 name: "WFP/Madbit Co"
 address: "http://wfp.org"
