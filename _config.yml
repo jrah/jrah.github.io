@@ -1,4 +1,4 @@
-Welcome to Jekyll!
+#Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -16,14 +16,11 @@ Welcome to Jekyll!
 title: James Home
 email: james@jameshome.co.uk
 description: > # this means to ignore newlines until "baseurl:"
-  I'm not a digital ninja, unicorn. I just make websites.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jmshome
 github_username:  jrah
 google_analytics: UA-61800971-1
-permalink: /:title/
-include: ["_items"]
 
 # Build settings
 markdown: kramdown
@@ -33,3 +30,9 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+collections:
+  items:
+    output: true
+    permalink: /:title
+    values:
+      layout: item
