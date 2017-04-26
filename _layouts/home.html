@@ -2,25 +2,18 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+<ul class="list pa0 ma0">
+  <h2 class="sr fs3">Most recent projects I have been involved in</h2>
+{% for item in site.items %}
+    <li class="mv3">
+        <h3 class="f3">
+          {{item.name}}
+          <a href="{{item.address}}" class="f5 db bn" target="_blank">{{item.address}}</a>
+        </h3>
+        <p>{{ item.content }}</p>
+      <!-- <div class="grid-10-12 grid-omega">
+        <img src="{{ site.url }}assets/images/{{item.name | downcase }}-iphone7.png" style="transform: rotate(12deg);" alt="">
+      </div> -->
+    </li>
+{% endfor %}
+</ul>

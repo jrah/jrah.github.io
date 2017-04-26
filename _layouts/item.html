@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article>
+
+  <header>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="grid-container">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
