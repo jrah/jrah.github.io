@@ -1,5 +1,6 @@
 ---
-layout: item
+layout: post
 title:  "Diversitea"
-categories: diversitea
+name: "Diversitea"
+address: "http://diversitea.co"
 ---
