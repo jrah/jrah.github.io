@@ -1,45 +1,31 @@
-<footer class="site-footer">
+<footer>
 
-  <div class="wrapper">
+  <div class="grid-container">
+<hr>
+  <!-- {% if site.description %}
+  <div class="mv1">
+    <p>{{ site.description | escape }}</p>
+  </div>
+  {% endif %} -->
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+<div class="grid-1-2">
+  <span>{{site.email}}</span>
+</div>
+<div class="grid-1-2 grid-omega">
+  <ul class="list pa0 ma0 flex justify-end">
+    {% if site.github_username %}
+    <li class="dib mh1">
+      {% include icon-github.html username=site.github_username %}
+    </li>
+    {% endif %}
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
+    {% if site.twitter_username %}
+    <li class="dib mh1">
+      {% include icon-twitter.html username=site.twitter_username %}
+    </li>
+    {% endif %}
+  </ul>
+</div>
 
   </div>
 
