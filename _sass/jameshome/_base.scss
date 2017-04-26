@@ -1,1 +1,7 @@
-@import "default";
+.icon {
+  &:hover {
+    svg path {
+      fill: $primary;
+    }
+  }
+}
