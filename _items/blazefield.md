@@ -5,7 +5,7 @@ name: "Blazefield Stud"
 address: "http://blazefieldstud.co.uk"
 ---
 
-I designed and developed a website to display various studs with close collaboration with the client.
+I designed and developed a website to display various studs in close collaboration with the client.
 
 - Front end prototype:
   - Tachyons
