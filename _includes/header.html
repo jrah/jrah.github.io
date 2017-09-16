@@ -1,5 +1,17 @@
-<header>
-  <div class="grid-container">
-    <h1 class="tc"><a href="{{ "/" | relative_url }}" class="c-dark bn db">{{ site.title | escape }}</a></h1>
-  </div>
+<header class="flex">
+<div class="mh4 w-50 flex justify-start">
+  <h1 class="tc f4">
+    <a href="{{ "/" | relative_url }}" class="c-dark bn db">{{ site.title | escape }} {{ prepend: '-' | page.title | escape }}</a>
+  </h1>
+</div>
+<div class="mh4 w-50 flex justify-end">
+    <nav>
+    <ul>
+      {% for page in site.data.navigation.nav %}
+      <li class="dib"><a href="{{page.url}}">{{page.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+
 </header>
