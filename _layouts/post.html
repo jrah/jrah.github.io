@@ -2,20 +2,27 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    {% if page.cover == true %}
+    <div class="bg-primary cover vh-50 flex justify-center items-center white"  style="background-image: url('{{site.url}}/assets/images/{{ page.title | slugify | append: '.jpg' }}')">
+      <h1>{{ page.title | escape }}</h1>
+    </div>
+    {% else %}
+    <div class="vh-50 flex justify-center items-center bg-primary white">
+      <h1 class="pa3 bg-black">{{ page.title | escape }}</h1>
+    </div>
+    {% endif %}
 
-  <header class="post-header">
-    <!-- <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p> -->
-  </header>
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="db mv1" itemprop="datePublished">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </time>
+    {% if page.author %}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+    {% endif %}
+    </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="pa4 ph5-l georgia mw9-l center" itemprop="articleBody">
     {{ content }}
   </div>
 
