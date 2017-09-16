@@ -37,5 +37,8 @@ collections:
     permalink: /:title
     values:
       layout: item
+  posts:
+    output: true
+    permalink: /blog/:title
 exclude:
     - node_modules
