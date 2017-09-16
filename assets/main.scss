@@ -2,9 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-$primary: #ff6300;
+$primary: #f2bb21;
 
-$anchor-bottom-hover: #ff6300;
+$anchor-bottom-hover: #F6D169;
 
 // modules
 
@@ -19,3 +19,10 @@ $mqs: (
 @import "dependency/craftmodule/index";
 
 @import "jameshome/base";
+
+
+// Tachyons extensions
+
+.bg-primary {
+  background-color: lighten($primary, 15%);
+}
