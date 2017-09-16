@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+
+
+<section class="mw7 center avenir">
+ {% if site.posts.first[0] == null %}
+    <div class="vh-50 flex justify-center items-center bg-primary white">
+      <h1 class="pa3 bg-black">{{ 'No posts yet!' | escape }}</h1>
+    </div>
+    {% else %}
+
+  {% for post in site.posts %}
+
+  <article>
+    <a class="db pv4 ph3 ph0-l no-underline black dim bn" href="{{ post.url | prepend: site.baseurl }}">
+      <div class="flex flex-column flex-row-ns">
+          {% if post.cover == true %}
+          <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          {% assign cover_image = post.title | slugify | append: '.jpg' %}
+          <img src="{{site.url}}/assets/images/{{cover_image}}" class="db" alt="Photo of {{post.title}}">
+        </div>
+        <div class="w-100 w-60-ns pl3-ns">
+          <h1 class="f3 fw1 baskerville mt0 lh-title">{{ post.title }}</h1>
+          <p class="f6 f5-l lh-copy">
+          {{ post.excerpt }}
+          </p>
+        </div>
+          {% else %}
+        <div class="w-100">
+          <h1 class="f3 fw1 baskerville mt0 lh-title tc">{{ post.title }}</h1>
+          <p class="f6 f5-l lh-copy">
+          {{ post.excerpt }}
+          </p>
+        </div>
+          {% endif %}
+      </div>
+    </a>
+  </article>
+
+  {% endfor %}
+  {% endif %}
+</section>
